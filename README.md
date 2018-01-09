@@ -23,8 +23,8 @@ For those familiar with Quartus and GitHub, this lab should be simple but still 
 * [**Frustration Lab** Tutorial](Lab1-Guide/FrustrationLab-Guide.md)
 * [**ModelSim** Tutorial](Lab1-Guide/ModelSimOverview-Guide.md)
 * Lab Report write-up
-* Commit, push and submission tag all modified lab files to **GitHub**
-* Submit report to **Canvas**
+* Commit, tag, and push all modified lab files to **GitHub** following the [**Submission Guide**](Lab1-Guide/GitHub-SubmissionGuide.md)
+* Submit report PDF to **Canvas**
 
 ## Assignment Details
 
@@ -72,6 +72,8 @@ For those familiar with Quartus and GitHub, this lab should be simple but still 
 
 ## Lab Report Requirements
 
+### Overview
+
 Lab reports will be written using the Markdown markup language and stored in your lab assignment GitHub repository.  The goal of the report is to provide the sort of work documentation which will be expected once in industry.  The [**Lab Report Expectations Guide**](Lab1-Guide/LabReportExpectations.md) has details and helpful guidelines for writing the lab reports.
 
 A directory (**Lab1-Report**) and a starting template file (**README.md**) are provided for the report.  Use the [Lab1-Report/README.md](Lab1-Report/README.md) file as the staring point for your lab report.  This will be the top level file for the lab report.  Any other files (such as images or additional documents) may be added to the Lab Report directory but should be referenced (using Markdown hyperlinks) through the top level **README.md** file.  
@@ -82,6 +84,14 @@ A directory (**Lab1-Report**) and a starting template file (**README.md**) are p
 
 A PDF version of the report must also be submitted to **Canvas**.  Most Markdown editors can export or print PDFs directly (although some editors have rendering issues).  If using the MarkdownViewer++ plugin for Notepad++, then this document [MarkdownViewer++ Workaround](Lab2-Guide/NPP-PDF-Workaround.md) has the instructions needed to create PDFs with images properly rendered. 
 
+### Lab 1 Requirements
+
+* Name, E-mail, Team #, and GitHub username
+* Quartus License Setup Screen Shot (from the [Assignment Details](#assignment-details) above)
+* A Markdown formatted table showing the display letters for each button combination (16 total)
+* Quartus compiler result screen shot showing no errors for the Frustration code
+* ModelSim simulation waveform screen shot
+
 
 ## GitHub Usage
 
@@ -91,18 +101,25 @@ We'll be using **GitHub Classroom** to deploy assignments.  Please report any is
 
 :warning: Please only use the repositories on the EECS301 GitHub account for EECS301 related class work.
 
+
 ## Lab Due Date
 
-The lab report submission will be due by 3:00pm on 09/01/2017.
+The lab project and report will be due by 3:00pm on Jan 26, 2018.
 
-All files and code should be submitted to GitHub following the [Submission Guidelines](Lab1-Guide/GitHub-SubmissionGuide.md) by the submission deadline.
+All files and code must be committed and pushed to GitHub by the submission deadline.  The submission process is detailed in the [**Lab Submission Guide**](Lab1-Guide/GitHub-SubmissionGuide.md).
+
+The PDF version of the lab report also needs to be submitted to Canvas by the same submission deadline.
+
 
 ## Grading Rubric
 
 * Submitting Name / Email / GitHub username - 10 pts
 * Submitting Report in Markdown format - 10 pts
-* License Setup window image included in the report showing installed licensed modules (4 total) - 40 pts
-* Running Demo code in Quartus and screen shots of results - 40 pts
+* Submitting Report to Canvas in PDF format - 10 pts
+* Quartus License Setup image included in the report showing installed licensed modules (4 total) - 20 pts
+* Running Demo code in Quartus and including screen shots of results in report - 40 pts
+* Simulating design in ModelSim and including screen shot of waveform results in report - 40 pts
+* Button Press Table included in report - 10 pts
 
 ## Reference Material
 
