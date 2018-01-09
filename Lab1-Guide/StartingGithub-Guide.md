@@ -43,16 +43,15 @@ After your personal account is setup:
 
 1. E-mail your **GitHub** username to the instructor so you can be added to the class **GitHub Student Team**.
 
-1. Continue to follow this guide for steps to setup and configure a **Git** client on your development machine (see [Git Client Setup](#git-client-setup) for instructions).
+1. Jump to the [**Git Client Setup**](#git-client-setup) section of this guide to setup and configure the **Git** client on your development machine.  (Remember to come back for Step 3 afterwards).
 
 	:warning: **NOTE:** The lab machines in the Glennan Design Lab already have the Git client software installed but there are still configuration steps needed for your login profile.
 
-1. Then follow steps to clone the [EECS301 Syllabus](https://github.com/CWRU-EECS301-S18/syllabus) repository to your local development machine as a test (for future reference see [Cloning from GitHub](#cloning-from-github)).
-
+1. Finally, follow the steps in the [**Cloning from GitHub**](#cloning-from-github) section to clone the [EECS301 Syllabus](https://github.com/CWRU-EECS301-S18/syllabus) repository to your local development machine to test your setup.
 
 ## Git Client Setup
 
-:warning: **NOTE:** If you are using the lab computers in the Glennan Design Lab, you can skip this section.  The lab machines already have [Git for Windows](https://git-for-windows.github.io) installed.  You can jump to the [Git Client Configuration (for Design Lab Computers)](#git-client-configuration-for-design-lab-computers) section to configure the **Git Bash** client.
+:warning: **NOTE:** If you are using the lab computers in the Glennan Design Lab, you can skip this section and jump directly to the [**Git Client Configuration (for Design Lab Computers)**](#git-client-configuration-for-design-lab-computers) section to configure the **Git Bash** client already install on the lab machines.
 
 If you are setting up your own machine, you'll need to install a Git Client. The client options and setup varies depending on the machine's operating system. Pick the guide that applies for your machine's OS:
 
@@ -65,18 +64,20 @@ If none of these options work for you, a list of additional git clients can be f
 
 ## Git Client Configuration (for Design Lab Computers)
 
-The lab computers in the Glennan Design Lab already have [Git for Windows](https://git-for-windows.github.io) installed but there are still a number of configuration steps to personalize your **Git** client.
+The lab computers in the Glennan Design Lab already have [**Git for Windows**](https://git-for-windows.github.io) installed but there are still a number of configuration steps to personalize your **Git** client.
 
 Run the **Configuration Steps** in the following sub-sections to properly configure the **Git** client.  
 
-:information_source: **NOTE:** Most of the command examples can be cut and pasted into **Git Bash** (omitting the `$` of course).  The paste key command for **Git Bash** is Shift+Ins or just right-click in the window and select Paste.
+:information_source: **NOTE:** Most of the command examples can be cut and pasted into **Git Bash** (omitting the `$` of course) to save time and avoid typing errors.  The paste key command for **Git Bash** is `Shift+Ins` or, using the mouse, just right-click in the window and select Paste from the menu.
 
-:information_source: **NOTE:** These configuration settings are set using the command-line git app but could also be set by editing the `~/.gitconfig` file directly (at your own risk). Using the command-line app is much easier and less error prone so stick to that for now.
+:information_source: **NOTE:** The configuration settings presented below are set using the command-line git app but could also be set by editing the `~/.gitconfig` file directly (at your own risk). Using the command-line app is much easier and less error prone so stick to that for now.
 
 
 ### Launch Git Bash
 
-The following configuration steps will use the **Git Bash** command-line.  Launch **Git Bash** using the desktop icon.
+The following configuration steps will use the **Git Bash** command-line.
+
+Launch **Git Bash** using the desktop icon.
 
 ![Git Bash Icon](images/GitBashIcon.png)
 
@@ -173,7 +174,7 @@ The [SSH (Secure Shell)](https://en.wikipedia.org/wiki/Secure_Shell) protocol is
 	Enter file in which to save the key (/c/Users/mattm/.ssh/id_rsa): /h/.ssh/id_rsa
 	```
 
-	:information_source: By default, keys are stored in `~/.ssh` but the lab machines are using Windows roaming domain profiles so the default location may have security issues.  Instead, the H drive provides somewhat better security to store the SSH keys.
+	:information_source: FYI: By default, SSH keys are stored in `~/.ssh` but the lab machines are using Windows roaming domain profiles so the default location may have security issues.  Instead, the H drive provides somewhat better security to store the SSH keys.
 
 1. Next, a passphrase can be entered for an added layer of security.
 
@@ -237,7 +238,7 @@ The public SSH key has to be given to GitHub so they can authenticate your SSH l
 
 1. Click the **Add SSH key** button to save the new key.
 
-:information_source: The public SSH key is now stored in your GitHub profile and can be used for any repositories you have access to on GitHub.  In the next section, a Git client side application will be setup to verify the SSH key works properly.
+:information_source: The public SSH key is now stored in your GitHub profile and can be used for any repositories you have access to on GitHub.  In the next section, a Git client-side application will be setup to verify the SSH key works properly.
 
 ### Configuring Command-Line Git SSH Access
 
@@ -303,7 +304,7 @@ By default, the **SSH config** file is stored at `~/.ssh/config` for each user. 
 	Hi user! You've successfully authenticated, but GitHub does not provide shell access.
 	```
 
-	The SSH connection is working properly and you can jump to the [Cloning from GitHub](#cloning-from-github) section.
+	The SSH connection is working properly and you can jump to the [**Cloning from GitHub**](#cloning-from-github) section.
 	
 	:warning: If you are prompted for a passphrase, see the next section about [SSH Key Passphrases](#ssh-key-passphrases).
 
