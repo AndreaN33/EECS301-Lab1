@@ -81,6 +81,23 @@ exiftran -ai *.jpg
 
 Screen snapshots can be an important part of documentation.  Here's a quick how-to for the major operating systems: [Screen Capture How-To](ScreenCapture-HowTo.md)
 
+
+## Markdown Tables
+
+Markdown can use simple formatting to create data tables.
+
+Example:
+
+| A | B | Q |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+
+See this guide for more information: [Organizing Information with Tables](https://help.github.com/articles/organizing-information-with-tables/)
+
+
 ## Reference Material
 
 * [Emoji Cheat Sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/)

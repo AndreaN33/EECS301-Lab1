@@ -6,9 +6,9 @@ This lab introduces the development tools used throughout the course.  The devel
 
 The [TerasIC DE1-SoC Development Board](https://github.com/CWRU-EECS301-S18/syllabus/tree/master/Reference/DE1-SoC/README.md) will be used to run the FPGA lab designs.  The board includes an Altera Cyclone V FPGA and many peripheral devices which will be used throughout the course.  Proper handling protocols to prevent ESD damage will be discussed before the boards are handed-out.
 
-This course utilizes the **Git** version control system to manage all lab assignment projects and documentation.  Assignments are distributed and collected via the **GitHub** hosting service.  See the [**Starting Guide to GitHub**](Lab1-Guide/StartingGithub-Guide.md) for details.
+This course utilizes the **Git** version control system to manage all lab assignment projects and documentation.  Assignments are distributed and collected via the **GitHub** hosting service.  See the [**Starting Guide to GitHub**](StartingGithub-Guide.md) for details.
 
-The lab computers in the **Glennan Undergraduate Design Lab** (Glennan 312) are setup and available for all labwork or, **optionally**, you can setup your own development machine using the following guide: [**Development Machine Setup Guide**](Lab1-Guide/DevelopmentMachineSetup-Guide.md).
+The lab computers in the **Glennan Undergraduate Design Lab** (Glennan 312) are setup and available for all labwork or, **optionally**, you can setup your own development machine using the following guide: [**Development Machine Setup Guide**](DevelopmentMachineSetup-Guide.md).
 
 ### Overview of assignment steps: 
 
@@ -32,7 +32,7 @@ To begin working on the lab, you'll first need to clone the lab assignment repos
 
 1. If you **have not** read through the **Git Tutorial** and done the [**Lab 1 Assignment Cloning Exercise**](Git-Tutorial.md#lab-1-assignment-cloning-exercise) do so now.  The exercise clones the lab repository and checks to make sure the tools have been configured properly.
 
-1. Open a **Git Bash** terminal (if not already open) and change the directory to your **Lab 1 Assignment** repository (your path will differ from the example):
+1. Open a **Git Bash** terminal (if not already open) and change the directory to your **Lab 1 Assignment** repository (your path may differ from the example):
 
 	```shell
 	$ cd /h/Projects/EECS301/lab1-assignment-user
@@ -74,9 +74,9 @@ Once the Lab Assignment repository is cloned to the local machine, you can move 
 
 ## Create the Quartus Project
 
-:information_source: Each lab will include framework files in the Lab Project directory.  The framework provides coding examples, simplifies complicated design components, and eliminates tedious parts of the FPGA project. Reviewing the provided framework would be instructional to see what's needed to create a full design from scratch but, due to lab time constraints, we'll focus on the core parts of FPGA design.
+:information_source: Each lab will include _framework_ files in the Lab Project directory.  The framework provides coding examples, simplifies complicated design components, and eliminates tedious parts of the FPGA project. Reviewing the provided framework would be instructional to see what's needed to create a full design from scratch but, due to lab time constraints, we'll focus on the core parts of FPGA design.  You're encouraged to use the framework code as a reference for your own code.
 
-Now we'll create a new Quartus project, using the **New Project Wizard**, and import the framework code that was included in the Lab Assignment repository.
+In the following section, we'll create a new Quartus project, using the **New Project Wizard**, and import the framework code that was included in the Lab Assignment repository.
 
 ### Assignment Steps:
 
@@ -123,7 +123,7 @@ Now we'll create a new Quartus project, using the **New Project Wizard**, and im
 	EECS301_Lab1_Project.sdc
 	```
 
-	**WARNING:** Do **not** add the `Lab1_Frustration_Module.v` file to the project.  It will be used later but will cause problems now.
+	**WARNING:** Do **not** add the `Lab1_Frustration_Module.v` file to the project.  It will be used later but will cause problems if added now.
 
 	Add these files to the project using the **Add Files** dialog:
 	
@@ -131,7 +131,7 @@ Now we'll create a new Quartus project, using the **New Project Wizard**, and im
 	
 	**NOTE:** The small button `...` to the right of the File Name text box will open a Select File dialog where you can select multiple files to add.
 	
-	**NOTE:** The file type filter needs to be adjusted in order to show the **.sdc** file in the file dialog.
+	**NOTE:** The **File Type** filter needs to be adjusted in order to show the **.sdc** file in the file dialog.
 	
 	**WARNING:** Quartus may generate errors if non-design files are added to the project so make sure to only add what is specified in the above list.
 	
@@ -195,9 +195,9 @@ Next, the pin assignments for the design must be set.  This step is **very** imp
 
 	From the menubar, select **Assignments** -> **Import Assignments...**
 
-	**NOTE:** The pin assignments for this project are stored in the file `Lab1_Project_Pins.csv`.  
+	**NOTE:** The pin assignments for this project are stored in the file `Lab1_Project_Assignments.qsf`.  
 	
-	Click the `...` button and select the `Lab1_Project_Pins.csv` pins file from the file list.
+	Click the `...` button and select the `Lab1_Project_Assignments.qsf` file from the file browser.
 
 	![Import Assignments](images/Quartus09.png)
 
@@ -229,7 +229,7 @@ After the project generation is complete and the FPGA pins are assigned, the mai
 
 ![Project Page](images/Quartus11.png)
 
-The compilation process for FPGA designs is often referred to as **synthesis** due to the fact that the high level code is being translated into logic functions.  Synthesizing FPGA code is a more complicated process than compiling code for a microprocessor system.  Compiling code for a microprocessor system results in native machine language instructions, whereas FPGA code is synthesized into a Register Transfer Logic (RTL) netlist then mapped on to the FPGA fabric of look-up-tables (LUTs), registers and interconnect signals.
+The compilation process for FPGA designs is often referred to as **synthesis** due to the fact that the high level code is being translated into logic functions.  Synthesizing FPGA code is a more complicated process than compiling code for a microprocessor system.  Compiling code for a microprocessor system results in native machine language instructions, whereas FPGA code is synthesized into a Register Transfer Logic (RTL) netlist then mapped on to the FPGA fabric of look-up-tables (LUTs), registers and interconnect signals.  The synthesizer has to take the signal path delays between fabric elements into consideration when mapping the RTL logic.
 
 The next step for the assignment is to compile (**synthesize** really but Quartus calls it compiling) the design.  The project framework code will compile without errors so you can see how the process is supposed to go.  Later on we'll add in some bugs so you can see what happens normally.
 
@@ -250,7 +250,28 @@ The next step for the assignment is to compile (**synthesize** really but Quartu
 
 1. When the build is finished you can check the results in the **Messages** window.  If all the files have been added properly, there should be no build errors but there will be a number of build warnings.  This is typical of Quartus and differentiating between bad warnings and ok warnings will be covered later.
 
-:warning: Generally, you should carefully review the results after every build to make sure there are not any warning messages that are really errors.  Unfortunately, Quartus spews warning messages for things that are actually _OK_ so it takes some experience to know what's a real problem and what is not.  At this point, if there are no errors, you are good.  The warning messages will be covered in more detail later.
+	:information_source: The log messages can be filtered based on error level (warning, critical warning, and error) using the three buttons in the upper-left corner of the **Messages** window.  A blue dot above the button means there are messages with that error level.
+	
+	![Filter Buttons](images/Quartus18.png)
+	
+	:warning: Generally, you should carefully review the results after every build to make sure there are not any warning messages that are really errors.  Unfortunately, Quartus spews warning messages for things that are actually _OK_ so it takes some experience to know what's a real problem and what is not.  At this point, if there are no red **Error** level messages, you are good.  The warning messages will be covered in more detail later.
+	
+### Common Problems
+
+* If you are running Quartus on your own machine and are not connected to the Case license server then you may see the following warning message which can be ignored.
+	
+	```
+	Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.	```
+	
+* If you have an error message similar to the following, then you have most likely used the wrong name for your **Top Level** module in Step 2 of the [Quartus Project Creation](#create-the-quartus-project).
+	
+	![Error Message](images/Quartus19.png)
+
+	To fix this, from the menubar, click on **Assignments** -> **Settings...** to open the project **Settings** dialog.  In the left-hand **Category** list select **General**.  Make sure the **Top-level entity** is set to `EECS301_Lab1_TopLevel` as shown below.
+	
+	![Settings](images/Quartus20.png)
+
+* For any other errors, check with a TA or post a question on the Slack message board.		
 
 ## Load the Project on the Development Board
 
@@ -260,9 +281,9 @@ Next, we'll load the compiled FPGA image on to the DE1-SoC development board.
 
 1. Jump to the [Development Kit Hardware Guide](DevKitHardware-Guide.md) for board setup and image loading instructions.  Return here when done.
 
-2. A very simple demo was provided with the framework code.  Pressing any of the 4 buttons will light up an associated LED.  
+2. A very simple demo was provided with the framework code.  Pressing any of the four buttons will light up an associated LED.  Tryout various button press combinations to see what the pattern is.
 
-As with most hardware projects, getting to the LED blinking stage was a lot of work getting the development environment set up.  Now we can get to actually get to writing code to do interesting things.
+As with most hardware projects, getting to the LED blinking stage was a lot of work. Now that the development environment is up and running we can actually start focusing on how to make the logic do interesting things.
 
 ---
 

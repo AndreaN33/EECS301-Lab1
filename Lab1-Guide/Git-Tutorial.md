@@ -287,6 +287,8 @@ Fast-forward
 
 ## Git from the GUI
 
+All lab instructions for Git use the command-line client exclusively.  You may, optionally, use one of the GUI clients to manage your Git repositories, if you wish, but there is no requirement to do so.
+
 ### Git GUI
 
 To learn more about the **Git GUI**, read through this guide: [An Illustrated Guide to Git on Windows](https://nathanj.github.io/gitguide/tour.html)
