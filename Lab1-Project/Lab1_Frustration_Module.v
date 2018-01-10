@@ -75,7 +75,7 @@ module Lab1_Frustration_Module
 	always @(posedge CLOCK_50)
 	begin
 		case (key_value)
-			4'h0 : LEDR <= 10'b0000000000;
+			4'h0 : LEDR <= 16'b0000000000;
 			4'h1 : LEDR <= 10'b0000000001;
 			4'h2 : LEDR <= 10'b0000000011;
 			4'h3 : LEDR <= 10'b0000000111;
@@ -121,7 +121,7 @@ module Lab1_Frustration_Module
 	always @(posedge CLOCK_50)
 	begin
 		case (key_value)
-			4'h0 : hex0_reg <= 7'h3F; // 0
+			4'h0 : hex0_reg <= 4'h3F; // 0
 			4'h1 : hex0_reg <= 7'h06; // 1
 			4'h2 : hex0_reg <= 7'h5B; // 2
 			4'h3 : hex0_reg <= 7'h4F; // 3

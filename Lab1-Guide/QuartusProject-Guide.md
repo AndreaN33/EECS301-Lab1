@@ -250,7 +250,7 @@ The next step for the assignment is to compile (**synthesize** really but Quartu
 
 1. When the build is finished you can check the results in the **Messages** window.  If all the files have been added properly, there should be no build errors but there will be a number of build warnings.  This is typical of Quartus and differentiating between bad warnings and ok warnings will be covered later.
 
-	:information_source: The log messages can be filtered based on error level (warning, critical warning, and error) using the three buttons in the upper-left corner of the **Messages** window.  A blue dot above the button means there are messages with that error level.
+	:information_source: The log messages can be filtered based on error level (warning, critical warning, and error) using the three buttons in the upper-left corner of the **Messages** window.  A blue dot above the button means there are messages with that error level.  Filtering the message log makes it much easier to find problem messages among lots of info messages.
 	
 	![Filter Buttons](images/Quartus18.png)
 	
@@ -276,6 +276,8 @@ The next step for the assignment is to compile (**synthesize** really but Quartu
 ## Load the Project on the Development Board
 
 Next, we'll load the compiled FPGA image on to the DE1-SoC development board.
+
+![](images/Lab1_DevBoardLayout.png)
 
 ### Assignment Steps:
 
