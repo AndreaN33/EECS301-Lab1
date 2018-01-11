@@ -172,7 +172,7 @@ Resolving errors in Quartus is an iterative process.  Many times one error will 
 
 	Warning messages in Quartus can either be OK to ignore or an indication that something bad is happening.  The two **Truncation** messages point out a signal size mismatch for an assignment which is almost always bad (even if its OK).
 	
-	The first Warning message, _"truncated literal to match 4 bits"_, means the _value_ of a constant is wider than the _size_ specified.  In Verilog, all constants use the format `<size>'<base><value>` so the size of the signal is specified along with the value (an `h` for base means the value is hexadecimal).  
+	The first Warning message, _"truncated literal to match 4 bits"_, means the _value_ of a constant is wider than the _size_ specified.  In Verilog, all constants use the format `<size>'<radix><value>` so the size of the signal is specified along with the value (an `h` for radix means the value is hexadecimal).
 	
 	The error, on line 124, is caused by the constant `4'h3F` which requires at least 6 bits to store the hexadecimal value 3F but is specified with a size of 4.  The truncated bits would end up as 0's which would be not be what was intended.
 		
