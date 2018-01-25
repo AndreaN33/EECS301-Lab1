@@ -21,7 +21,8 @@ of one, and the others proceeding with values 2, 3, and 4. When the total value 
 or higher, a "C" was displayed. If the total value was 7 or higher, an "A" was displayed in the next 
 section. If the total value was 9 or higher, an "S" was displayed in the segment following "A". When the 
 total value was 10, an "E" was displayed following the "S", spelling "CASE". The following table 
-demonstrates this behavior
+demonstrates this behavior.
+
 |Button 4|Button 3|Button 2| Button 1|Cell 1|Cell 2|Cell 3|Cell 4|Number|
 |--------|--------|--------|---------|------|------|------|------|------|
 |0|0|0|0| | | | |0|
