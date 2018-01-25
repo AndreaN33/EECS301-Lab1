@@ -33,8 +33,8 @@ module Lab1_Frustration_Module
 	input       [3:0] KEY,
 
 	// Clock Signal
-	input       CLOCK_50,
-)
+	input       CLOCK_50
+);
 
 
 	////////////////////////////////////////////////////////
@@ -43,8 +43,8 @@ module Lab1_Frustration_Module
 	//
 	// Keys are assigned values 1, 2, 3, 4.  The Key values are summed then displayed.
 	//
-	wire [3:0] key_value;
-	reg  [3:0] key0_value;
+	reg [3:0] key_value;
+	wire  [3:0] key0_value;
 	wire [3:0] key1_value;
 	wire [3:0] key2_value;
 	wire [3:0] key3_value;
@@ -75,7 +75,7 @@ module Lab1_Frustration_Module
 	always @(posedge CLOCK_50)
 	begin
 		case (key_value)
-			4'h0 : LEDR <= 16'b0000000000;
+			4'h0 : LEDR <= 10'b0000000000;
 			4'h1 : LEDR <= 10'b0000000001;
 			4'h2 : LEDR <= 10'b0000000011;
 			4'h3 : LEDR <= 10'b0000000111;
@@ -121,7 +121,7 @@ module Lab1_Frustration_Module
 	always @(posedge CLOCK_50)
 	begin
 		case (key_value)
-			4'h0 : hex0_reg <= 4'h3F; // 0
+			4'h0 : hex0_reg <= 7'h3F; // 0
 			4'h1 : hex0_reg <= 7'h06; // 1
 			4'h2 : hex0_reg <= 7'h5B; // 2
 			4'h3 : hex0_reg <= 7'h4F; // 3

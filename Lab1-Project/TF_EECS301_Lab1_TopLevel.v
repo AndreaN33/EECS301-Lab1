@@ -256,6 +256,15 @@ module TF_EECS301_Lab1_TopLevel();
 		// Add another Key Test Pattern here...
 		//
 		#2000;
+		KEY[0] = 4'b0; // Press Key
+		#100;
+		test_pass_fail = exp_ledr_value == LEDR ? 1'b1 : 1'b0;  // This uses the ternary if-then-else operation
+		if (test_pass_fail)
+			$display(" KEY[0] Press Passed. Key Value = %d", exp_key_value);
+		else
+			$display(" KEY[0] Press FAILED!!!  Expected [%010b] != Actual [%010b]", exp_ledr_value, LEDR);
+		#900;
+		KEY[0] = 4'b1; // Release Key
 
 
 		

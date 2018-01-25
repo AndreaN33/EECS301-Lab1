@@ -1,7 +1,7 @@
-# EECS301 Lab #1 Report
+git@github.com:CWRU-EECS301-S18/lab1-assignment-AndreaN33.git# EECS301 Lab #1 Report
 
-* **Name** (email@case.edu)
-* **Team #?**
+* **Andrea Norris** (adn33@case.edu)
+* **Team #6**
 
 
 ## Introduction
