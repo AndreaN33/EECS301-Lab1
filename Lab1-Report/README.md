@@ -1,7 +1,9 @@
-git@github.com:CWRU-EECS301-S18/lab1-assignment-AndreaN33.git# EECS301 Lab #1 Report
+git@github.com:CWRU-EECS301-S18/lab1-assignment-AndreaN33.git
+## EECS301 Lab #1 Report
 
 * **Andrea Norris** (adn33@case.edu)
 * **Team #6**
+* **GitHub Username: AndreaN33**
 
 
 ## Introduction
@@ -48,7 +50,8 @@ indicates an unpressed button.
 
 ## Verification Results
 The results of the lab were tested in a few ways. Since the primary function of the lab was to learn to debug 
-and upload code, a successful upload and run as shown below is verification of this function. 
+and upload code, a successful compilation, upload and run as shown below is verification of this function. 
+![Image Tag](Frustration_Module_Screenshot.PNG)
 ![Image Tag](EECS301_Lab1_Frustration_Lab.PNG)
 The waveform simulated in ModelSim also serves to verify the results gotten from this lab.
 ![Image Tag](Waveform.png)
@@ -66,6 +69,8 @@ of Git and how the different console commands work.
 Completing this lab took 4.5 hours total troubleshooting with my lab partner and on my own. Actual lab 
 work took about 4 hours additionally, for 8.5 hours work overall. The work was done solely on the Circuits 
 Lab Computer.
+Licensing information about the Quartus software used is included below:
+![Image Tag](QuartusLicenseSetup.PNG)
 
 
 ## Difficulties / Issues
